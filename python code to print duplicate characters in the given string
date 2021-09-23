@@ -1,0 +1,18 @@
+string = input("enter the string:")
+def duplicates(s):
+    elements = {}
+    for char in s:
+        if elements.get(char,None)!= None:
+            elements[char]+=1
+        else:
+            elements[char]=1
+    return [k for k,v in elements.items() if v>1]
+print("the duplicate characters:",string)
+print(duplicates(string))
+
+
+
+output:
+enter the string : gunandvan
+the duplicate characters:
+'u','n'
